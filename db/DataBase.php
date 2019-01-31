@@ -7,7 +7,7 @@
 class DataBase {
     
     //** ATRIBUTOS **//
-    private $host = "localhost";
+    private $host = "85.251.91.132";
     private $user = "samuel";
     private $pass = "Samuel_1";
     private $bd = "guinote";
