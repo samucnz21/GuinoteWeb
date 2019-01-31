@@ -71,7 +71,7 @@
         var data = { "id_user" : <?php echo $_SESSION['id_user']; ?> , "nombre_user": "<?php echo $_SESSION['usuario'] ?>" };
         //var socket = io.connect('http://192.168.0.128:8080');
         //var socket = io.connect('http://85.251.91.132:8080');
-        var socket = io.connect('https://guinotesamunode.herokuapp.com:8080/');
+        var socket = io.connect('https://guinotesamunode.herokuapp.com');
         //console.log("conexion");
         //console.log(socket);
 
