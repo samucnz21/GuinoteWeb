@@ -1,6 +1,5 @@
 <?php 
     require_once '../controller/funciones.php';
-}
 ?>
 <!DOCTYPE html>
 <html>
