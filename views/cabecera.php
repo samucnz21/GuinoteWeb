@@ -49,7 +49,7 @@
     <!-- <script type="text/javascript" src="http://192.168.0.128:8080/socket.io/socket.io.js"></script> -->
     <!-- <script type="text/javascript" src="http://85.251.91.132:8080/socket.io/socket.io.js"></script> -->
     <!-- <script src="/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script> -->
-    <!-- <script type="text/javascript" src="https://guinotesamunode.herokuapp.com:8080/socket.io/socket.io.js"></script> -->
+    <script type="text/javascript" src="https://guinotesamunode.herokuapp.com:8080/socket.io/socket.io.js"></script>
 
     <script type="text/javascript">
 
@@ -71,7 +71,7 @@
         var data = { "id_user" : <?php echo $_SESSION['id_user']; ?> , "nombre_user": "<?php echo $_SESSION['usuario'] ?>" };
         //var socket = io.connect('http://192.168.0.128:8080');
         //var socket = io.connect('http://85.251.91.132:8080');
-        var socket = io.connect('https://guinotesamunode.herokuapp.com');
+        var socket = io.connect('https://guinotesamunode.herokuapp.com:8080');
         //console.log("conexion");
         //console.log(socket);
 
