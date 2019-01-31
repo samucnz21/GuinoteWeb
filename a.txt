@@ -1,0 +1,21 @@
+
+    # Activar RewriteEngine
+    RewriteEngine on
+    RewriteBase / 
+    RewriteCond %{SCRIPT_FILENAME} !-d
+    RewriteCond %{SCRIPT_FILENAME} !-f
+
+    
+
+    RewriteRule ^login/?$ /login.php [L]
+    RewriteRule ^exito-registro/?$ /login.php?exito=true [L]
+    RewriteRule ^error-registro/?$ /login.php?error=true [L]
+    RewriteRule ^desconectar/?$ /unsession.php [L]
+    RewriteRule ^registro/?$ /register.php [L]
+    RewriteRule ^ajaxController/?$ /controller/ajaxController.php [L]
+
+    RewriteRule ^admin/principal/?$ /views/admin/principal.php [L]
+    RewriteRule ^user/principal/?$ /views/user/principal.php [L]
+    RewriteRule ^admin/principal/([a-zA-Z0-9-]*)?$ /views/admin/grupo.php?nombre=$1 [L]
+    RewriteRule ^user/principal/([a-zA-Z0-9-]*)?$ /views/user/grupo.php?nombre=$1 [L]
+    
