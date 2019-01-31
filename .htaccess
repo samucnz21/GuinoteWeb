@@ -1,8 +1,8 @@
     #Permitir CORS
 
     Header set Access-Control-Allow-Origin "*"
-    Header set Access-Control-Allow-Headers "origin, x-requested-with, content-type"
-    Header set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "*"
+    Header set Access-Control-Allow-Methods "*"
 
 
     # Activar RewriteEngine
