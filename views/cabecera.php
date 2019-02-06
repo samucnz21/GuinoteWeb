@@ -1,5 +1,10 @@
 <?php 
     require_once '../controller/funciones.php';
+    if(!isset($_SESSION['id_user']) || empty($_SESSION['id_user']))
+    {
+        session_destroy();
+        header("Location: /login");
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -36,20 +41,32 @@
     <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
     <!-- Bootstrap 3.3.6 -->
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <!-- <script src="/plugins/fastclick/fastclick.js"></script> -->
+    <!-- Select 2 -->
+    <!-- <script src="/plugins/select2/select2.min.js"></script> -->
+    <!-- Bootstrap Slider -->
+    <!-- <script src="/plugins/bootstrap-slider/bootstrap-slider.js"></script> -->
     <!-- AdminLTE App -->
     <script src="/bootstrap/js/app.min.js"></script>
+    <!-- Sparkline -->
+    <!-- <script src="/plugins/sparkline/jquery.sparkline.min.js"></script> -->
+    <!-- SlimScroll 1.3.0 -->
+    <!-- <script src="/plugins/slimScroll/jquery.slimscroll.min.js"></script>-->
+    <!-- DatePicker -->
+    <!-- <script src="/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="/plugins/datepicker/locales/bootstrap-datepicker.es.min.js"></script>-->
     <!-- Bootbox -->
     <script src="/bootstrap/js/bootbox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>-->
 
     <?php 
     /******************** SCRIPTS SOCKET.IO ******************/
     ?>
     
-    <!-- <script type="text/javascript" src="http://192.168.0.128:8080/socket.io/socket.io.js"></script> -->
-    <!-- <script type="text/javascript" src="http://85.251.91.132:8080/socket.io/socket.io.js"></script> -->
+    <!-- <script type="text/javascript" src="http://localhost/socket.io/socket.io.js"></script> -->
+    <script type="text/javascript" src="http://85.251.91.132/socket.io/socket.io.js"></script>
     <!-- <script src="/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script> -->
-    <!-- <script type="text/javascript" src="https://guinotesamunode.herokuapp.com:8080/socket.io/socket.io.js"></script> -->
 
     <script type="text/javascript">
 
@@ -69,11 +86,10 @@
         }
 
         var data = { "id_user" : <?php echo $_SESSION['id_user']; ?> , "nombre_user": "<?php echo $_SESSION['usuario'] ?>" };
-        //var socket = io.connect('http://192.168.0.128:8080');
-        //var socket = io.connect('http://85.251.91.132:8080');
-        var socket = io.connect('https://guinotesamunode.herokuapp.com:8080');
-        //console.log("conexion");
-        //console.log(socket);
+        //var socket = io.connect('http://192.168.1.128:8080');
+        //var socket = io.connect('192.168.1.128:8080');
+        var socket = io.connect('http://85.251.91.132',{'transports':['polling']});
+        //var socket = io.connect('https://guinotesamu1.herokuapp.com/');
 
         socket.emit('conectarUsuario', data );
 
