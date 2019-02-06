@@ -24,3 +24,10 @@
 
     RewriteRule ^principal/?$ /views/principal.php [L]
     RewriteRule ^partida/([a-zA-Z0-9-]*)?$ /views/partida.php?partida=$1 [L]
+
+    RewriteCond %{REQUEST_URI} ^/socket.io [NC]
+    RewriteCond %{QUERY_STRING} transport=websocket [NC]
+    RewriteRule /(.*) ws://guinotesamunode.herokuapp.com:8080/$1 [P,L]
+
+    ProxyPass /socket.io https://guinotesamunode.herokuapp.com:8080/socket.io
+    ProxyPassReverse /socket.io https://guinotesamunode.herokuapp.com:8080/socket.io
