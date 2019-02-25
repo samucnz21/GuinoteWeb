@@ -89,7 +89,7 @@
         //var socket = io.connect('http://192.168.1.128:8080');
         //var socket = io.connect('192.168.1.128:8080');
         //var socket = io.connect('http://85.251.91.132',{'transports':['polling']});
-        var socket = io.connect('https://guinotesamunode.herokuapp.com:8080/');
+        var socket = io.connect('https://guinotesamunode.herokuapp.com/');
 
         socket.emit('conectarUsuario', data );
 
