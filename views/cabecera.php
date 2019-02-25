@@ -88,8 +88,8 @@
         var data = { "id_user" : <?php echo $_SESSION['id_user']; ?> , "nombre_user": "<?php echo $_SESSION['usuario'] ?>" };
         //var socket = io.connect('http://192.168.1.128:8080');
         //var socket = io.connect('192.168.1.128:8080');
-        var socket = io.connect('http://85.251.91.132',{'transports':['polling']});
-        //var socket = io.connect('https://guinotesamu1.herokuapp.com/');
+        //var socket = io.connect('http://85.251.91.132',{'transports':['polling']});
+        var socket = io.connect('https://guinotesamunode.herokuapp.com/');
 
         socket.emit('conectarUsuario', data );
 
