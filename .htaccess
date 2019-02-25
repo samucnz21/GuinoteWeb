@@ -23,6 +23,6 @@
     RewriteRule /(.*) ws://guinotesamunode.herokuapp.com:8080/$1 [P,L]
 
     #ProxyPass /socket.io https://guinotesamunode.herokuapp.com:8080/socket.io
-    ProxyPassReverse /socket.io https://guinotesamunode.herokuapp.com:8080/socket.io
+    #ProxyPassReverse /socket.io https://guinotesamunode.herokuapp.com:8080/socket.io
 
     #ProxyPass /socket.io http://localhost:8080/socket.io
