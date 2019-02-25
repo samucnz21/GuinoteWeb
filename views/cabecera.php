@@ -58,14 +58,14 @@
     <script src="/plugins/datepicker/locales/bootstrap-datepicker.es.min.js"></script>-->
     <!-- Bootbox -->
     <script src="/bootstrap/js/bootbox.min.js"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 
     <?php 
     /******************** SCRIPTS SOCKET.IO ******************/
     ?>
     
     <!-- <script type="text/javascript" src="http://localhost/socket.io/socket.io.js"></script> -->
-    <script type="text/javascript" src="http://85.251.91.132/socket.io/socket.io.js"></script>
+    <!-- <script type="text/javascript" src="http://85.251.91.132/socket.io/socket.io.js"></script> -->
     <!-- <script src="/node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script> -->
 
     <script type="text/javascript">
