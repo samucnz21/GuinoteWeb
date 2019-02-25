@@ -1,12 +1,4 @@
-    #Permitir CORS
-
-    #Header set Access-Control-Allow-Origin "*"
-    #Header set Access-Control-Allow-Headers "*"
-    #Header set Access-Control-Allow-Methods "*"
-
-
     # Activar RewriteEngine
-    LoadModule proxy_module
     RewriteEngine on
     RewriteBase / 
     RewriteCond %{SCRIPT_FILENAME} !-d
